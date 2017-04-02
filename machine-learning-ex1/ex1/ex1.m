@@ -56,7 +56,7 @@ theta = zeros(2, 1); % initialize fitting parameters
 
 % Some gradient descent settings
 iterations = 1500;
-alpha = 0.01;
+alpha = 0.001;
 
 fprintf('\nTesting the cost function ...\n')
 % compute and display initial cost
@@ -116,7 +116,6 @@ for i = 1:length(theta0_vals)
 	  J_vals(i,j) = computeCost(X, y, t);
     end
 end
-
 
 % Because of the way meshgrids work in the surf command, we need to
 % transpose J_vals before calling surf, or else the axes will be flipped
