@@ -16,8 +16,10 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
+
 temp = theta - ((alpha/m)*sum((sum(X.*theta',2)-y).*X))';
 theta = temp;
+plot(theta(1), theta(2), 'rx', 'MarkerSize', 2, 'LineWidth', 2);
 
     % ============================================================
 
