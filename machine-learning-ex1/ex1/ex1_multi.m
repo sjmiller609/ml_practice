@@ -107,7 +107,9 @@ fprintf('\n');
 function [hVal] = hypothesis(x,theta)
 hVal = x'*theta
 end
-price = hypothesis([1;1650;3],theta); % You should change this
+norm_x1 = (1650-mu(1))/sigma(1)
+norm_x2 = (3-mu(2))/sigma(2)
+price = hypothesis([1;norm_x1;norm_x2],theta); % You should change this
 
 
 % ============================================================
