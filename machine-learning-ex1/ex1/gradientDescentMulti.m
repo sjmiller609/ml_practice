@@ -21,6 +21,8 @@ for iter = 1:num_iters
 
 
 
+temp = theta - ((alpha/m)*sum((sum(X.*theta',2)-y).*X))';
+theta = temp;
 
 
 
