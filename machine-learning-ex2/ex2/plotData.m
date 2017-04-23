@@ -11,8 +11,6 @@ figure; hold on;
 %               2D plot, using the option 'k+' for the positive
 %               examples and 'ko' for the negative examples.
 %
-X
-y
 
 for i = 1:size(X,1)
 	if y(i) > 0
