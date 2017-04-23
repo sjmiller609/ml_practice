@@ -30,11 +30,16 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-
-
-
-
-
+%TODO: vectorize implementation
+for sample_no = 1:size(X,1)
+    for c = 1:size(all_theta,1)
+        theta = (all_theta(c,:))';
+        % length should be 10
+        h(c) = sigmoid(X(sample_no,:)*theta);
+    end
+    [M,I] = max(h);
+    p(sample_no) = mod(I,10);
+end
 
 % =========================================================================
 
